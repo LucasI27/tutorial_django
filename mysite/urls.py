@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from votacao.views import index
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('votacao/',include ('votacao.urls')),
+    path('docedeleite/',include ('docedeleite.urls')),
 ]
